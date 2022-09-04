@@ -20,4 +20,6 @@ POST /api/Todo/Add - adds a to-do task, required body in format:
 > "isComplete": false
 > }```
 
+  
+  
 The application does not use any database to store saved tasks, so any restart of the application causes the task list to be reset as well.
