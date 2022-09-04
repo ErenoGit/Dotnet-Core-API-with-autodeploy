@@ -8,8 +8,11 @@ Version with working GitLab CI/CD for autodeployment: https://gitlab.com/ErenoGi
 Application written in .NET Core exposing a simple API for writing and reading a to-do list.
 
 API query list:
+
 GET /api/Todo/GetAll - retrieves a list of all to-do tasks
+
 GET /api/Todo/GetById/<id> - retrieves one specific to-do task
+  
 POST /api/Todo/Add - adds a to-do task, required body in format: 
   
 > {
