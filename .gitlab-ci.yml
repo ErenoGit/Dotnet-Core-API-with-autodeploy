@@ -1,0 +1,36 @@
+default:
+  tags:
+    - deployment
+
+stages:
+  - pull
+  - build
+  - deploy
+
+pull-job:
+  stage: pull
+
+  script:
+    - echo "pull stage start"
+    - cd ~/dotnet-api-test/Project
+    - git pull
+    - echo "pull stage done"
+
+
+build-job:
+  stage: build
+  
+  script:
+    - echo "build stage start"
+    - cd ~/dotnet-api-test
+    - docker-compose build
+    - echo "build stage done"
+
+deploy-job:
+  stage: deploy
+  
+  script:
+    - echo "deploy stage start"
+    - cd ~/dotnet-api-test
+    - docker-compose up -d
+    - echo "deploy stage done"
